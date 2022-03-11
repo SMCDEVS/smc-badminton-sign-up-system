@@ -16,8 +16,8 @@ app.engine('html', ejs.renderFile);
 const pool = mysql.createPool({
     host: 'localhost',
     user: 'root',
-    password: '1234',
-    database: 'badminton-sign-up'
+    password: 'Park1973**',
+    database: 'smc_badminton'
 });
 
 app.get('/', (req, res) => {
@@ -25,7 +25,39 @@ app.get('/', (req, res) => {
 })
 
 app.get('/admin', (req, res) => {
-    res.render('admin.ejs', {})
+
+    pool.getConnection((err, connection) => {
+        if(err)
+            throw err
+
+        connection.query('select * from user',
+            (error, results) => {
+                if(error)
+                    throw error
+
+                res.render('admin.ejs', {
+                    data: results
+                })
+
+            })
+    })
+})
+
+app.delete('/delete', (req, res) => {
+    var regex = ""
+
+    pool.getConnection((err, connection) => {
+        if(err)
+            throw err
+        // ex 30710|30708 띄어쓰기 x
+        connection.query('delete from user where user_id = regexp(?)',
+            (error) => {
+
+                if(error)
+                    throw error
+
+            })
+    })
 })
 
 app.all('*', (req, res) => {
