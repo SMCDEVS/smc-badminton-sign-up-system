@@ -5,7 +5,14 @@
   "main": "app.js",
   "scripts": {
     "start": "node app.js",
+    "build": "pkg .",
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "app": "./app.js"
+  },
+  "pkg": {
+    "assets": "public/**/*"
   },
   "keywords": [],
   "author": {
@@ -23,6 +30,7 @@
     "body-parser": "^1.19.2",
     "ejs": "^3.1.6",
     "express": "^4.17.3",
-    "mysql": "^2.18.1"
+    "mysql": "^2.18.1",
+    "pkg": "^5.5.2"
   }
 }
