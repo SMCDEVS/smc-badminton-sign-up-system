@@ -23,4 +23,7 @@ artifacts:
     - smc-badminton-sign-up-system-linux
     - appspec.yml
     - scripts/*.sh
-  discard-paths: yes
+    - package*.json
+    - app.js
+    - public/**/*
+  discard-paths: no

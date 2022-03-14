@@ -1,4 +1,5 @@
 #!/bin/bash
+
 if [[ -n "$(find . -name "nvm.sh")" ]];
 then
   echo "node is already install"
