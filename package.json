@@ -13,9 +13,7 @@
   },
   "pkg": {
     "assets": [
-      "public/views/**/*",
-      "public/css/**/*",
-      "public/js/**/*"
+      "public/**/*"
     ]
   },
   "keywords": [],
