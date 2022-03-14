@@ -9,7 +9,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "bin": {
-    "app": "./app.js"
+    "app": "app.js"
   },
   "pkg": {
     "assets": "public/**/*"
