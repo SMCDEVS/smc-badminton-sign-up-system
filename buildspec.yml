@@ -13,7 +13,7 @@ phases:
   post_build:
     commands:
       - echo "Post Build Phase.."
-      - docker imgaes
+      - docker images
       - docker push 673306085779.dkr.ecr.ap-northeast-2.amazonaws.com/smc-badminton:latest
 
 artifacts:
