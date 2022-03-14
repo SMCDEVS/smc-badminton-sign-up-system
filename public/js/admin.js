@@ -5,7 +5,7 @@ function createCSV() {
     var row = []
     var csv = []
 
-    row.push("학년", "반", "번호", "이름")
+    row.push("학년", "반", "번호", "이름", "전화번호")
     csv.push(row.join(","))
 
     for(var i = 1;i < tableRows.length;i++){

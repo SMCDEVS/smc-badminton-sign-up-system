@@ -1,0 +1,26 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      nodejs: 12
+    commands:
+      - npm install
+  pre_build:
+    commands:
+      - echo "Pre Build Phase.."
+  build:
+    commands:
+      - echo "Build Phase.."
+      - npm run build
+  post_build:
+    commands:
+      - echo "Post Build Phase.."
+      - ls -al
+
+artifacts:
+  files:
+    - smc-badminton-sign-up-system-linux
+    - appspec.yml
+    - scripts/*.sh
+  discard-paths: yes
