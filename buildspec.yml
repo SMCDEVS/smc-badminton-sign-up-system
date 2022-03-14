@@ -9,7 +9,7 @@ phases:
   build:
     commands:
       - echo "Build Phase.."
-      - docker build . -t smc-badminton:latest 673306085779.dkr.ecr.ap-northeast-2.amazonaws.com/smc-badminton:latest
+      - docker build . -t 673306085779.dkr.ecr.ap-northeast-2.amazonaws.com/smc-badminton:latest
   post_build:
     commands:
       - echo "Post Build Phase.."
