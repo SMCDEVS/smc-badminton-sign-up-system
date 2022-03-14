@@ -1,29 +1,23 @@
 version: 0.2
 
 phases:
-  install:
-    runtime-versions:
-      nodejs: 12
-    commands:
-      - npm install
   pre_build:
     commands:
       - echo "Pre Build Phase.."
+      - echo "Login into Amazon ECR"
+      - aws ecr get-login-password --region ap-northeast-2 | docker login --username AWS --password-stdin 673306085779.dkr.ecr.ap-northeast-2.amazonaws.com
   build:
     commands:
       - echo "Build Phase.."
-      - npm run build
+      - docker build . -t smc-badminton:latest 673306085779.dkr.ecr.ap-northeast-2.amazonaws.com/smc-badminton:latest
   post_build:
     commands:
       - echo "Post Build Phase.."
-      - ls -al
+      - docker imgaes
+      - docker push 673306085779.dkr.ecr.ap-northeast-2.amazonaws.com/smc-badminton:latest
 
 artifacts:
   files:
-    - smc-badminton-sign-up-system-linux
     - appspec.yml
     - scripts/*.sh
-    - package*.json
-    - app.js
-    - public/**/*
-  discard-paths: no
+  discard-paths: yes

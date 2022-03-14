@@ -1,6 +1,3 @@
 #!/bin/bash
 
-
-
-# nohup /home/ec2-user/smc-badminton-sign-up-system-linux > /dev/null 2> /dev/null < /dev/null &
-nohup npm start > /dev/null 2> /dev/null < /dev/null &
+docker run --name was -d -p 80:80 673306085779.dkr.ecr.ap-northeast-2.amazonaws.com/smc-badminton:latest
