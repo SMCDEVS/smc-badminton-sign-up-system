@@ -14,9 +14,9 @@ app.set('view engine', 'ejs')
 app.engine('html', ejs.renderFile);
 
 const pool = mysql.createPool({
-    host: 'localhost',
-    user: 'root',
-    password: 'Park1973**',
+    host: 'mysql.clh0cegn7mjp.ap-northeast-2.rds.amazonaws.com',
+    user: 'admin',
+    password: 'iLy6wbTk795SXmw',
     database: 'smc_badminton'
 });
 

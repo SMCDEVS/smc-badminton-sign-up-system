@@ -20,7 +20,7 @@ phases:
 
 artifacts:
   files:
-    - smc-badminton-sign-up-system
+    - smc-badminton-sign-up-system-linux
     - appspec.yml
     - scripts/*.sh
   discard-paths: yes
