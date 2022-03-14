@@ -12,7 +12,11 @@
     "app": "app.js"
   },
   "pkg": {
-    "assets": "public/**/*"
+    "assets": [
+      "public/views/**/*",
+      "public/css/**/*",
+      "public/js/**/*"
+    ]
   },
   "keywords": [],
   "author": {
