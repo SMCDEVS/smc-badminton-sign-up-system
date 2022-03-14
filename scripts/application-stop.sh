@@ -1,6 +1,6 @@
 #!/bin/bash
-if [[ -n "$(netstat -ano | grep tcp | grep 80)" ]];
+if [[ -n "$(docker ps -a | grep was)" ]];
 then
   echo "Server is running"
-  killall smc-badminton-sign-up-system-linux
+  docker rm -f was
 fi
