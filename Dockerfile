@@ -1,5 +1,5 @@
-FROM public.ecr.aws/docker/library/node:latest
-
+#FROM public.ecr.aws/docker/library/node:latest
+FROM node:latest
 RUN mkdir -p /app/public
 
 WORKDIR /app

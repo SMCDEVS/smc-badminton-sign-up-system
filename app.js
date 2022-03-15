@@ -30,7 +30,7 @@ app.get('/admin', (req, res) => {
         if(err)
             throw err
 
-        connection.query('select * from user',
+        connection.query(`select * from user`,
             (error, results) => {
                 if(error)
                     throw error
@@ -43,21 +43,54 @@ app.get('/admin', (req, res) => {
     })
 })
 
-app.delete('/delete', (req, res) => {
-    var regex = ""
+app.get('/complete', (req, res) => {
+
+})
+
+app.post('/delete', (req, res) => {
+
+    var regex = req.body.regex
+    console.log(regex)
 
     pool.getConnection((err, connection) => {
         if(err)
             throw err
-        // ex 30710|30708 띄어쓰기 x
-        connection.query('delete from user where user_id = regexp(?)',
+
+        connection.query(`delete from user where user_id regexp ?`,[regex],
             (error) => {
 
                 if(error)
                     throw error
 
+                res.status(200).end();
+
             })
     })
+})
+
+app.post('/sign_up', (req, res) => {
+
+    var name = req.body.name
+    var userId = req.body.userId
+
+    
+
+    pool.getConnection((err, connection) => {
+        if(err)
+            throw err
+
+        connection.query(`insert into user values(?,?,?,?,?,?)`,[],
+            (error) => {
+
+                if(error)
+                    throw error
+
+                res.redirect('/complete')
+
+            })
+    })
+
+
 })
 
 app.all('*', (req, res) => {
