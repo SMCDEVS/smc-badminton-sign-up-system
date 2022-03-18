@@ -9,11 +9,11 @@ body{
     height: 100vh;
     justify-content: center;
     align-items: center;
-    padding: 10px;
     background-color: #f5f6f7;
 //background: linear-gradient(45deg, #aa4b6b, #6b6b83, #3b8d99);
 }
 .container{
+    margin: 0 10px 0;
     max-width: 500px;
     width: 100%;
     background-color: #ffffff;
