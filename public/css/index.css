@@ -10,15 +10,32 @@ body{
     justify-content: center;
     align-items: center;
     background-color: #f5f6f7;
-//background: linear-gradient(45deg, #aa4b6b, #6b6b83, #3b8d99);
+}
+.background{
+    margin: 0 50vh 0;
+}
+@media (max-width:767px) {
+    .background{
+        margin: 0 5vh 0;
+    }
+}
+@media (min-width: 768px) and (max-width:1338px) {
+    .background{
+        margin: 0;
+    }
 }
 .container{
-    margin: 0 10px 0;
+    margin-top: 70px;
     max-width: 500px;
     width: 100%;
     background-color: #ffffff;
     padding: 20px 30px;
     border-radius: 15px;
+    align-content: center;
+    align-items: center;
+}
+.notice{
+    margin-left: 20px;
 }
 #typography-caption{
     font-family: AppleSDGothicNeoM00;
@@ -51,9 +68,11 @@ input{
     border-radius: 15px;
     font-size: 20px;
 }
+/*
 .error-massage{
-//color: #e93636;
+   color: #e93636;
 }
+*/
 hr{
     border: 1px solid #d2d2d7;
     margin-top: 40px;
