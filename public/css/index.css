@@ -20,7 +20,7 @@
 .nav-title p{
     margin: 14px 0 -14px;
     display: block;
-    font-family: AppleSDGothicNeoB00;
+    font-family: "AppleSDGothicNeoB00";
     line-height: 1.14286;
     white-space: nowrap;
     letter-spacing: .011em;
@@ -62,7 +62,7 @@ body{
     margin-left: 20px;
 }
 #typography-caption{
-    font-family: AppleSDGothicNeoM00;
+    font-family: "AppleSDGothicNeoM00";
     font-size: 17px;
 }
 .title{
@@ -82,11 +82,11 @@ span.star{
     color: #e93636;
 }
 #mini_notice{
-    font-family: AppleSDGothicNeoM00;
+    font-family: "AppleSDGothicNeoM00";
     display: inline-block;
 }
 input{
-    font-family: AppleSDGothicNeoB00;
+    font-family: "AppleSDGothicNeoB00";
     text-align: center;
     width: 100%;
     height: 70px;
