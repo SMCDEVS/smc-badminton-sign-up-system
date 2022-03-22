@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "AppleSDGothicNeoEB00";
+    font-family: 'Noto Sans KR', sans-serif;
 }
 .header{
     position: fixed;
@@ -20,7 +20,7 @@
 .nav-title p{
     margin: 14px 0 -14px;
     display: block;
-    font-family: "AppleSDGothicNeoB00";
+    font-weight: 500;
     line-height: 1.14286;
     white-space: nowrap;
     letter-spacing: .011em;
@@ -49,7 +49,7 @@ body{
     /*background: linear-gradient(45deg, #aa4b6b, #6b6b83, #3b8d99);*/
 }
 .container{
-    margin-top: 70px;
+    margin: 70px 0 50px;
     max-width: 500px;
     width: 100%;
     background-color: #ffffff;
@@ -62,12 +62,13 @@ body{
     margin-left: 20px;
 }
 #typography-caption{
-    font-family: "AppleSDGothicNeoM00";
+    font-weight: 300;
     font-size: 17px;
 }
 .title{
     margin-top: 20px;
-    font-size: 40px;
+    font-size: 45px;
+    font-weight: 700;
     text-align: center;
     margin-bottom: 20px;
     word-break: keep-all;
@@ -76,17 +77,18 @@ body{
     margin: 20px;
 }
 label{
-    font-size: 30px;
+    font-size: 28px;
+    font-weight: 700;
 }
 span.star{
     color: #e93636;
 }
 #mini_notice{
-    font-family: "AppleSDGothicNeoM00";
+    font-weight: 300;
     display: inline-block;
 }
 input{
-    font-family: "AppleSDGothicNeoB00";
+    font-weight: 300;
     text-align: center;
     width: 100%;
     height: 70px;
@@ -108,10 +110,16 @@ button{
     height: 10vh;
     outline: none;
     font-size: 30px;
+    font-weight: 700;
     border: none;
     border-radius: 50px;
     background-color: #0071e3;
     color: white;
+}
+.copyright{
+    text-align: center;
+    font-weight: 100;
+    font-size: 12px;
 }
 @media only screen and (max-width:767px) {
     .background{
@@ -124,6 +132,9 @@ button{
     }
     #typography-caption{
         font-size: 15px;
+    }
+    .copyright{
+        font-size: 10px;
     }
 }
 @media (min-width: 768px) and (max-width:1338px) {
