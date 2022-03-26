@@ -44,7 +44,7 @@ app.get('/admin', (req, res) => {
 })
 
 app.get('/complete', (req, res) => {
-
+    res.send('<h1>회원가입이 성공적으로 완료되었습니다!</h1>')
 })
 
 app.post('/delete', (req, res) => {
@@ -62,7 +62,7 @@ app.post('/delete', (req, res) => {
                 if(error)
                     throw error
 
-                res.status(200).end();
+                res.status(200).end()
 
             })
     })
@@ -70,16 +70,23 @@ app.post('/delete', (req, res) => {
 
 app.post('/sign_up', (req, res) => {
 
-    var name = req.body.name
-    var userId = req.body.userId
+    let name = req.body.name
+    let studentId = req.body.studentId
+    let studentPhoneNumber = req.body.phoneNumber
 
-    
+    let grade = studentId.substring(0,1)
+    let _class = studentId.substring(1,3)
+    let number = studentId.substring(3,5)
+
+    console.log(grade)
+    console.log(_class)
+    console.log(number)
 
     pool.getConnection((err, connection) => {
         if(err)
             throw err
 
-        connection.query(`insert into user values(?,?,?,?,?,?)`,[],
+        connection.query(`insert into user values(?,?,?,?,?,?)`,[studentId, grade, _class, number, name, studentPhoneNumber],
             (error) => {
 
                 if(error)
@@ -89,7 +96,6 @@ app.post('/sign_up', (req, res) => {
 
             })
     })
-
 
 })
 
