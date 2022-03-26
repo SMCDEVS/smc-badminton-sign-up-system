@@ -67,6 +67,7 @@ function deleteUser() {
 
 }
 
+
 function deleteUserElement() {
 
     for(let i = 1;i < tableRows.length;i++) {
@@ -84,3 +85,4 @@ function selectAll() {
         tableRows[i].getElementsByTagName('input')[0].checked = isCheck
     }
 }
+
