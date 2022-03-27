@@ -12,16 +12,7 @@ function login(){
     console.log(req);
     console.log(JSON.stringify(req))
 }
-<<<<<<< HEAD
-// fetch("/log_in", {
-//     method: "POST",
-//     headers: {
-//         "Content-Type": ""
-//     },::
-//     body: JSON.stringify()
-//     }
-// )
-=======
+
 fetch("/sign_up", {
         method: "POST",
         headers: {
@@ -30,4 +21,3 @@ fetch("/sign_up", {
         body: JSON.stringify(req)
     }
 )
->>>>>>> main
