@@ -11,13 +11,14 @@ function login(){
     };
     console.log(req);
     console.log(JSON.stringify(req))
-}
 
-fetch("/sign_up", {
+    fetch("/sign_up", {
         method: "POST",
         headers: {
             Content-Type: "application/json"
         },
         body: JSON.stringify(req)
     }
-)
+}
+
+
