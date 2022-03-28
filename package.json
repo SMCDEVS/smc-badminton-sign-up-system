@@ -2,14 +2,14 @@
   "name": "smc-badminton-sign-up-system",
   "version": "1.0.0",
   "description": "smc-badminton-sign-up-system",
-  "main": "app.js",
+  "main": "src/app.js",
   "scripts": {
-    "start": "node app.js",
+    "start": "node src/app.js",
     "build": "pkg .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "bin": {
-    "app": "app.js"
+    "app": "src/app.js"
   },
   "pkg": {
     "assets": [

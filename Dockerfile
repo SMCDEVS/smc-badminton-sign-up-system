@@ -1,6 +1,6 @@
-#FROM public.ecr.aws/docker/library/node:latest
-FROM node:latest
-RUN mkdir -p /app/public
+FROM public.ecr.aws/docker/library/node:latest
+
+RUN mkdir -p /app/src/
 
 WORKDIR /app
 
@@ -8,9 +8,7 @@ COPY package*.json /app/
 
 RUN npm install
 
-COPY app.js /app/
-
-COPY public/ /app/public/
+COPY src/ /app/src/
 
 EXPOSE 80
 
