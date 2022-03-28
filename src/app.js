@@ -26,7 +26,7 @@ app.get('/_pmj_/admin', async (req, res) => {
 })
 
 app.get('/complete', (req, res) => {
-    res.send('<h1 align="center">회원가입이 성공적으로 완료되었습니다!</h1>')
+    res.send('<h1 align="center">면접 신청이 성공적으로 완료되었습니다!</h1>')
 })
 
 app.post('/delete', (req, res) => {
