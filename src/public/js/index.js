@@ -8,7 +8,7 @@ function login(){
     console.log(req)
     console.log(JSON.stringify(req))
 
-    let options = {
+    const options = {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -16,9 +16,12 @@ function login(){
         body: JSON.stringify(req)
     }
 
-
     fetch('/sign_up', options)
-        .then()
+        .then(response => response.json())
+        .then(response => {
+            if(response.isOverlap)
+                console.log('당신은 이미 신청했군요👀')
+            else
+                location.href = '/complete'
+        })
 }
-
-
