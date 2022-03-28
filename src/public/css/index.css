@@ -174,7 +174,12 @@ button{
 /* PC layout */
 @media only screen and (min-width:767px) {
     body{
-        height: 100vh; /* PC 윗 여백 생성 */
+        height: 130vh; /* PC 윗 여백 생성 */
+    }
+    .nav-title p{
+        max-width: 100%;
+        line-height: 1.26316;
+        letter-spacing: .012em;
     }
     .background{
         margin: 50vh 50vh 0;
@@ -183,7 +188,15 @@ button{
         display: none;
     }
     #typography-head{
+        margin: 90px auto 30px;
         font-size: 60px;
         font-weight: 700;
+    }
+    #typography-description{
+        margin: 0 600px 100px; /* 줄바꿈 여백 */
+        font-size: 25px;
+    }
+    #between-headline-container{
+        margin: 0 500px; /* hr 길이*/
     }
 }
