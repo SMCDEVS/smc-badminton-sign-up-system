@@ -1,8 +1,8 @@
-var express = require('express')
-var app = express()
-var bodyParser = require('body-parser')
-var ejs = require('ejs')
-var mysql = require('./model/database')
+const express = require('express')
+const app = express()
+const bodyParser = require('body-parser')
+const ejs = require('ejs')
+const mysql = require('./model/database')
 
 app.use(bodyParser())
 app.use(express.urlencoded({extended:false}))
@@ -17,7 +17,7 @@ app.get('/', (req, res) => {
     res.render('index.ejs', {});
 })
 
-app.get('/_pmj_/admin', async (req, res) => {
+app.get('/iLy6wbTk795SXmw/admin', async (req, res) => {
 
     let results = await mysql.execute(`select * from user`)
     res.render('admin.ejs', {data: results})
@@ -43,6 +43,11 @@ app.post('/sign_up', async (req, res) => {
     let studentId = req.body.studentId
     let studentPhoneNumber = req.body.phoneNumber
 
+    if(name == undefined || studentId == undefined || studentPhoneNumber == undefined){
+        res.status(400).send('<h1 align="center">Error 400 Bad Request</h1>')
+        return
+    }
+
     let grade = studentId.substring(0,1)
     let _class = studentId.substring(1,3)
     let number = studentId.substring(3,5)
@@ -58,7 +63,7 @@ app.post('/sign_up', async (req, res) => {
 })
 
 app.all('*', (req, res) => {
-    res.status(404).send('<h1 align="center>Error 404 Page Not Found - 페이지를 찾을 수 없습니다.</h1>')
+    res.status(404).send('<h1 align="center">Error 404 Page Not Found - 페이지를 찾을 수 없습니다.</h1>')
 })
 
 app.listen(80,'0.0.0.0',()=>{

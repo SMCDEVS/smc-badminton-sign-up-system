@@ -1,12 +1,21 @@
 
 function signup(){
+    let name = document.getElementById('name').value
+    let studentId = document.getElementById('studentId').value
+    let phoneNumber = document.getElementById('tel').value
+
     const req ={
-        "name": document.getElementById('name').value,
-        "studentId": document.getElementById('studentId').value,
-        "phoneNumber": document.getElementById('tel').value
+        "name": name,
+        "studentId": studentId,
+        "phoneNumber": phoneNumber
     }
-    console.log(req)
-    console.log(JSON.stringify(req))
+
+
+    if(!/[0-9]{5,6}/.test(studentId) || !/[0-1]{3}[0-9]{4}[0-9]{4}/.test(phoneNumber)){
+        console.log('형식에 맞춰서 지원해주세요!')
+        return
+    }
+
 
     const options = {
         method: 'POST',
