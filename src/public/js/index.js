@@ -1,5 +1,5 @@
 
-function login(){
+function signup(){
     const req ={
         "name": document.getElementById('name').value,
         "studentId": document.getElementById('studentId').value,
