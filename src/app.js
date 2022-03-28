@@ -20,13 +20,12 @@ app.get('/', (req, res) => {
 app.get('/_pmj_/admin', async (req, res) => {
 
     let results = await mysql.execute(`select * from user`)
-    console.log(results)
     res.render('admin.ejs', {data: results})
 
 })
 
 app.get('/complete', (req, res) => {
-    res.send('<h1 align="center">회원가입이 성공적으로 완료되었습니다!</h1>')
+    res.send('<h1 align="center">면접 신청이 성공적으로 완료되었습니다!</h1>')
 })
 
 app.post('/delete', (req, res) => {
@@ -38,7 +37,7 @@ app.post('/delete', (req, res) => {
     res.status(200).end()
 })
 
-app.post('/sign_up', (req, res) => {
+app.post('/sign_up', async (req, res) => {
 
     let name = req.body.name
     let studentId = req.body.studentId
@@ -48,12 +47,14 @@ app.post('/sign_up', (req, res) => {
     let _class = studentId.substring(1,3)
     let number = studentId.substring(3,5)
 
-    console.log(grade)
-    console.log(_class)
-    console.log(number)
+    let results = await mysql.execute(`select * from user where user_id = ${studentId}`)
 
-    mysql.executeQuery(`insert into user values(?,?,?,?,?,?)`, [studentId, grade, _class, number, name, studentPhoneNumber])
-    res.redirect('/complete')
+    let isOverlap = results[0] == undefined ? false : true
+
+    if(!isOverlap)
+        mysql.executeQuery(`insert into user values(?,?,?,?,?,?)`, [studentId, grade, _class, number, name, studentPhoneNumber])
+
+    res.json({"isOverlap": isOverlap})
 })
 
 app.all('*', (req, res) => {

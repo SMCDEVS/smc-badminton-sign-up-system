@@ -16,8 +16,8 @@ module.exports = {
         })
     },
 
-    execute: async (sql) => {
-        return await new Promise((resolve, reject) => {
+    execute: (sql) => {
+        return new Promise((resolve, reject) => {
             pool.getConnection((err, connection) => {
                 if(err)
                     reject(err)
