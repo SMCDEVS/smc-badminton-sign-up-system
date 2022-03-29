@@ -28,6 +28,10 @@ app.get('/complete', (req, res) => {
     res.send('<h1 align="center">면접 신청이 성공적으로 완료되었습니다!</h1>')
 })
 
+app.get('/health', (req, res) => {
+    res.json({"status" : "ok"})
+})
+
 app.post('/delete', (req, res) => {
 
     var regex = req.body.regex
