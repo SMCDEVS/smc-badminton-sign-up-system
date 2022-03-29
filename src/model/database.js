@@ -13,6 +13,7 @@ module.exports = {
                         throw error
 
                 })
+            connection.release()
         })
     },
 
@@ -30,6 +31,7 @@ module.exports = {
 
                         resolve(results)
                     })
+                connection.release()
             })
         })
     }

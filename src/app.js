@@ -56,9 +56,15 @@ app.post('/sign_up', async (req, res) => {
     let _class = studentId.substring(1,3)
     let number = studentId.substring(3,5)
 
+    console.log(`학년 : ${grade} , 반 : ${_class} , 번호 : ${number}`)
+
     let results = await mysql.execute(`select * from user where user_id = ${studentId}`)
 
+    console.log(results)
+
     let isOverlap = results[0] == undefined ? false : true
+
+    console.log(isOverlap)
 
     if(!isOverlap)
         mysql.executeQuery(`insert into user values(?,?,?,?,?,?)`, [studentId, grade, _class, number, name, studentPhoneNumber])
