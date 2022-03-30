@@ -166,6 +166,44 @@ button{
     #typography-caption{
         font-size: 15px;
     }
+    .popup-page{
+        padding: 50px 30px;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #fff;
+        width: 90%;
+        height: auto;
+        border-radius: 30px;
+        /* 바탕 어둡게 처리 */
+        box-shadow: 0 25px 50px rgba(0,0,0,0.5), 0 0 0 1000px rgba(0,0,0,0.5);
+        justify-content: center;
+        align-items: center;
+        visibility: hidden;
+    }
+    #popup-title{
+        margin-bottom: 30px;
+        font-size: 45px;
+        font-weight: 700;
+        text-align: center;
+    }
+    #popup-description{
+        text-align: center;
+        font-size: 23px;
+        font-weight: 400;
+        word-break: keep-all;
+    }
+    .popup-page.active{
+        visibility: visible;
+    }
+    #interview{
+        margin: 40px auto;
+        text-align: center;
+        font-size: 20px;
+        font-weight: 400;
+        color: #0070c9;
+    }
     .copyright{
         font-size: 12px;
     }

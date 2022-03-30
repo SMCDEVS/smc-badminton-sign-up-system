@@ -57,17 +57,6 @@
         <div class="box">
             <label>학번<span class="star">*</span></label>
             <input type="tel" id="studentId" pattern=”[0-9]*” maxlength="5" placeholder="Ex) 30710" required>
-            <!--
-            <script type="text/javascript">
-                function input() {
-                    if (this.value.length > 5) {
-                        this.value = this.value.slice(0, 5);
-                    }
-                }
-            </script>
-            -->
-            <!-- TODO: 클릭하고 아무것도 입력하지 않을 시, 오류메시지 뜨게 하기, 오류메시지 색상 바꾸기, 텍스트 높이 가운데 맞추기
-            <span class="error-message">오류: 학번을 입력하세요.</span>-->
         </div>
         <div class="box">
             <label>이름<span class="star">*</span></label>
@@ -78,9 +67,16 @@
             <p id="mini_notice">(합격여부 공지용)</p>
             <input type="tel" id="tel" pattern="[0-1]{3}[0-9]{4}[0-9]{4}" maxlength="11" placeholder="Ex) 01012345678" required>
         </div>
-        <hr>
+        <hr id="between-input-button">
         <div>
-            <button onclick="signup()">신청하기!</button>
+            <button class="btn" onclick="signup()">신청하기!</button>
+        </div>
+        <div class="popup">
+            <div class="popup-page">
+                <p id="popup-title">감사합니다!</p>
+                <p id="popup-description">면접신청이 성공적으로 완료되었습니다. 면접에 꼭 참여해주시길 바랍니다.</p>
+                <p id="interview">면접장소 및 일시 확인하러 가기 ></p>
+            </div>
         </div>
     </div>
     <div class="copyright">
@@ -88,5 +84,6 @@
     </div>
 </div>
 <script defer src="/js/index.js"></script>
+<script defer src="/js/confetti.js"></script>
 </body>
 </html>
