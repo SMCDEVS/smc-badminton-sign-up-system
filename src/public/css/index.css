@@ -56,6 +56,7 @@ body{
     justify-content: center;
     align-items: center;
     background-color: #f5f6f7;
+    overflow-x: hidden;
 }
 .container{
     margin: 70px auto 50px;
@@ -130,7 +131,7 @@ button{
 .popup-page{
      justify-content: center;
      align-items: center;
-     visibility: hidden; /////////
+     visibility: hidden;
 }
 #popup-title{
     /*
