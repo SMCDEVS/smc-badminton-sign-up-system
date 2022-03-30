@@ -31,6 +31,7 @@
     color: #f5f5f7;
 }
 .image{
+    pointer-events: none;
     max-width: 100%;
     height: auto;
 }
