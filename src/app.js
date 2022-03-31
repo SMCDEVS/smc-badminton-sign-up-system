@@ -48,7 +48,7 @@ app.post('/sign_up', async (req, res) => {
     let studentPhoneNumber = req.body.phoneNumber
 
     if(name == undefined || studentId == undefined || studentPhoneNumber == undefined ||
-    name == '' || studentId == '' || studentPhoneNumber == ''){
+    name == '' || studentId == ''){
         res.status(400).end()
         return
     }
