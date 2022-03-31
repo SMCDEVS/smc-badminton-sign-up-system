@@ -4,9 +4,10 @@
   "description": "smc-badminton-sign-up-system",
   "main": "src/app.js",
   "scripts": {
-    "start": "node src/app.js",
+    "start": "node ./src/app.js",
     "build": "pkg .",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon --watch \"./src/**/*.js\" --exec \"npm start\""
   },
   "bin": {
     "app": "src/app.js"
@@ -28,11 +29,14 @@
     }
   ],
   "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^2.0.15",
+    "pkg": "^5.5.2"
+  },
   "dependencies": {
     "body-parser": "^1.19.2",
     "ejs": "^3.1.6",
     "express": "^4.17.3",
-    "mysql": "^2.18.1",
-    "pkg": "^5.5.2"
+    "mysql": "^2.18.1"
   }
 }

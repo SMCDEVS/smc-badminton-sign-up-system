@@ -24,12 +24,12 @@ app.get('/iLy6wbTk795SXmw/admin', async (req, res) => {
 
 })
 
-app.get('/complete', (req, res) => {
-    res.send('<h1 align="center">면접 신청이 성공적으로 완료되었습니다!</h1>')
-})
-
 app.get('/health', (req, res) => {
     res.json({"status" : "ok"})
+})
+
+app.get('/400_error', (req, res) => {
+    res.render('400_error')
 })
 
 app.post('/delete', (req, res) => {
@@ -47,8 +47,9 @@ app.post('/sign_up', async (req, res) => {
     let studentId = req.body.studentId
     let studentPhoneNumber = req.body.phoneNumber
 
-    if(name == undefined || studentId == undefined || studentPhoneNumber == undefined){
-        res.status(400).send('<h1 align="center">Error 400 Bad Request</h1>')
+    if(name == undefined || studentId == undefined || studentPhoneNumber == undefined ||
+    name == '' || studentId == ''){
+        res.status(400).end()
         return
     }
 
@@ -57,19 +58,18 @@ app.post('/sign_up', async (req, res) => {
     let number = studentId.substring(3,5)
 
     console.log(`학년 : ${grade} , 반 : ${_class} , 번호 : ${number}`)
-
     let results = await mysql.execute(`select * from user where user_id = ${studentId}`)
 
     console.log(results)
 
     let isOverlap = results[0] == undefined ? false : true
 
-    console.log(isOverlap)
-
     if(!isOverlap)
         mysql.executeQuery(`insert into user values(?,?,?,?,?,?)`, [studentId, grade, _class, number, name, studentPhoneNumber])
+    else
+        mysql.executeQuery('update user set user_name = ?, user_phone_number = ? where user_id = ?', [name, studentPhoneNumber, studentId])
 
-    res.json({"isOverlap": isOverlap})
+    res.status(200).end()
 })
 
 app.all('*', (req, res) => {

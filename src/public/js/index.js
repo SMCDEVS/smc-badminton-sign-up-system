@@ -17,12 +17,11 @@ function signup(){
     }
 
     fetch('/sign_up', options)
-        .then(response => response.json())
-        .then(response => {
-            if(response.isOverlap)
-                console.log('당신은 이미 신청했군요👀')
-            else
-                showPopup();
+        .then((response) => {
+            if(response.status == 400)
+                location.href = '/400_error'
+            else if(response.status == 200)
+                showPopup()
         })
 
 

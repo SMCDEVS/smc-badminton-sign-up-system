@@ -1,14 +1,12 @@
 FROM public.ecr.aws/docker/library/node:latest
 
-RUN mkdir -p /app/src/
+RUN mkdir /app/
 
-WORKDIR /app
+WORKDIR /app/
 
-COPY package*.json /app/
+COPY ./ /app/
 
-RUN npm install
-
-COPY src/ /app/src/
+RUN npm install --only=prod
 
 EXPOSE 80
 
