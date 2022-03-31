@@ -5,5 +5,4 @@
 Dockerfile
 *.md
 *.sh
-*.yml
 scripts
