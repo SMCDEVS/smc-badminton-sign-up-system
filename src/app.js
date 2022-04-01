@@ -29,7 +29,11 @@ app.get('/health', (req, res) => {
 })
 
 app.get('/400_error', (req, res) => {
-    res.render('400_error')
+    res.render('400_error.ejs')
+})
+
+app.get('/interview', (req, res) => {
+    res.render('interview.ejs')
 })
 
 app.post('/delete', (req, res) => {
