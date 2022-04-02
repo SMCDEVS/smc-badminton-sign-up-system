@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>세명컴고 배드민턴부 면접 장소 및 일시</title>
-    <link rel="stylesheet" href="ex.css">
+    <link rel="stylesheet" href="css/interview.css">
     <link rel="shortcut icon" href="images/favicon/favicon.ico">
     <link rel="apple-touch-icon" sizes="57x57" href="images/favicon/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="images/favicon/apple-icon-60x60.png">
@@ -18,7 +18,7 @@
     <link rel="apple-touch-icon" sizes="144x144" href="images/favicon/apple-icon-144x144.png">
     <link rel="apple-touch-icon" sizes="152x152" href="images/favicon/apple-icon-152x152.png">
     <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192"  href="images/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="images/favicon/android-icon-192x192.png">
     <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="96x96" href="images/favicon/favicon-96x96.png">
     <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
@@ -28,7 +28,8 @@
     <meta name="theme-color" content="#ffffff">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
+          rel="stylesheet">
 </head>
 <body>
 <div class="header">
@@ -39,18 +40,81 @@
     </header>
 </div>
 <div class="background">
-    <div class="vid">
-        <video id="pc-vid" src=""></video>
-        <video id="mobile-vid" src=""></video>
-    </div>
-    <div class="headline">
-        <p id="typography-head">환영합니다!</p>
-        <p id="typography-description">가입 신청을 하시면 세명컴퓨터고등학교 2022년도 배드민턴 동아리 면접 기회가 주어집니다.</p>
-    </div>
+    <div class="content">
 
-    <div class="copyright">
-        <p>© 2022 SMC Badminton. All rights reserved.</p>
+        <div class="pc">
+            <!-- PC 텍스트 -->
+            <div class="interview-location-pc">
+
+                <!--                <p id="location-pc">면접 장소</p>-->
+                <!--                <p id="location-info-pc">체육관</p>-->
+
+            </div>
+            <div class="video-pc">
+                <div class="first">
+                    <video id="pc-vid" src="/videos/pc-display-ratio/badminton-girls.mp4" autoplay loop muted></video>
+                    <div class="rea">
+                        <p id="location-pc">면접 장소</p>
+                    </div>
+                </div>
+
+
+                <video id="pc-vid2" src="/videos/pc-display-ratio/badminton-net.mp4" autoplay loop muted></video>
+                <video id="pc-vid3" src="/videos/pc-display-ratio/badminton-player.mp4" autoplay loop muted></video>
+
+            </div>
+        </div>
+
+        <div class="mobile">
+            <!-- Mobile 텍스트 -->
+            <div class="interview-info-mobile">
+                <div class="first-mobile">
+                    <video id="mobile-vid1" src="/videos/mobile-display-ratio/badminton-girls-mobile.mp4" autoplay muted loop></video>
+                </div>
+                <div class="first-text-mobile">
+                    <div class="intro">
+                        <p class="intro-title">세명컴고 배드민턴부:<br>면접 장소 및 일시</p>
+                        <p class="intro-description"></p>
+                    </div>
+                </div>
+                <div class="side-margin">
+                    <div class="second-mobile">
+                        <video id="mobile-vid2" src="/videos/mobile-display-ratio/badminton_net-mobile-9.16.mp4" autoplay muted loop></video>
+                        <div class="second-text-mobile">
+                            <p class="typography-eyebrow">면접 장소</p>
+                            <p class="second-typography-headline">체육관</p>
+                            <p class="second-typography-description">- 급식실 2층</p>
+                            <p class="typography-quarantine-guideline">모두의 안전을 위해 마스크 의무 착용과 물리적 거리두기를 실시하오니 협조 부탁드립니다.
+                                저희는 체온을 측정하고 손 세정제를 제공하는 한편, 면접 전후로 모든
+                                장비를 소독하고 있습니다.</p>
+                        </div>
+                    </div>
+                    <div class="blank"></div>
+                    <div class="third-mobile">
+                        <video id="mobile-vid3" src="/videos/mobile-display-ratio/badminton-player-mobile-9.16.mp4" autoplay muted loop></video>
+                        <div class="third-text-mobile">
+                            <div class="grade-1">
+                                <p class="typography-eyebrow">면접 일시</p>
+                                <p class="typography-headline">1학년</p>
+                                <p class="typography-description-date">4월 8일, 금요일</p>
+                                <p class="typography-description-time">오후 12:00 - 오후 1:10</p>
+                            </div>
+                            <div class="blank" id></div>
+                            <div class="grade-2,3">
+                                <p class="typography-headline">2, 3학년</p>
+                                <p class="typography-description-date">4월 11일, 월</p>
+                                <p class="typography-description-time">오후 12:00 - 오후 1:10</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
+</div>
+<div class="copyright">
+    <p>© 2022 SMC Badminton. All rights reserved.</p>
+</div>
 </div>
 
 </body>
