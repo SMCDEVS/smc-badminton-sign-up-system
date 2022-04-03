@@ -113,7 +113,6 @@ body {
         overflow: hidden;
         position: relative;
         border-radius: 20px;
-        overflow: hidden;
         /*padding: 20px;*/
     }
 
@@ -122,6 +121,7 @@ body {
         filter: brightness(50%);
         outline: none;
         border: none;
+        overflow: hidden;
     }
 
     /* 하단부 border-radius 잘림 방지 */
