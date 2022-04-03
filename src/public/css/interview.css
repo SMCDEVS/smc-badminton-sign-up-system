@@ -113,6 +113,7 @@ body {
         overflow: hidden;
         position: relative;
         border-radius: 20px;
+        overflow: hidden;
         /*padding: 20px;*/
     }
 
@@ -186,12 +187,17 @@ body {
     .typography-description-date {
         margin-top: 10px;
         font-weight: 500;
-        font-size: 30px;
+        font-size: 32px;
     }
 
     .typography-description-time {
-        font-size: 18px;
+        font-size: 20px;
     }
+
+    .grade-2_3{
+        margin-top: 70px;
+
+}
 
     .copyright {
         font-size: 12px;
