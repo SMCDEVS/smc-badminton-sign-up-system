@@ -194,11 +194,10 @@ body {
         font-size: 20px;
     }
 
+    /* grade-1 과 grade-2_3 사이 간격 */
     .grade-2_3{
         margin-top: 70px;
-
 }
-
     .copyright {
         font-size: 12px;
     }
