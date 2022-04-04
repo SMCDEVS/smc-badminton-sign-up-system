@@ -68,10 +68,14 @@ app.post('/sign_up', async (req, res) => {
 
     let isOverlap = results[0] == undefined ? false : true
 
-    if(!isOverlap)
+    if(!isOverlap) {
         mysql.executeQuery(`insert into user values(?,?,?,?,?,?)`, [studentId, grade, _class, number, name, studentPhoneNumber])
-    else
+        mysql.executeQuery(`insert into user_accumulate values(?,?,?,?,?,?)`, [studentId, grade, _class, number, name, studentPhoneNumber])
+    }
+    else {
         mysql.executeQuery('update user set user_name = ?, user_phone_number = ? where user_id = ?', [name, studentPhoneNumber, studentId])
+        mysql.executeQuery(`insert into user_accumulate values(?,?,?,?,?,?)`, [studentId, grade, _class, number, name, studentPhoneNumber])
+    }
 
     res.status(200).end()
 })
