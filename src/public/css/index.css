@@ -1,10 +1,11 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Noto Sans KR', sans-serif;
 }
-.header{
+
+.header {
     position: fixed;
     top: 0;
     height: 3em;
@@ -14,10 +15,12 @@
     backdrop-filter: blur(8px);
     /*z-index: 999;*/
 }
-.nav-title{
+
+.nav-title {
     margin: 0 14px 0;
 }
-.nav-title p{
+
+.nav-title p {
     margin: 11px 0 -11px;
     display: block;
     font-weight: 500;
@@ -30,35 +33,41 @@
     cursor: default;
     color: #f5f5f7;
 }
-.image{
+
+.image {
     pointer-events: none;
     max-width: 100%;
     height: auto;
 }
+
 /*
 .background{
     margin: 0 50vh 0;
 }
 */
-#mobile-img{
+#mobile-img {
     text-align: center;
 }
-#typography-head{
+
+#typography-head {
     text-align: center;
 }
-#typography-description{
+
+#typography-description {
     text-align: center;
     word-break: keep-all;
-    color: rgba(0,0,0,0.8);
+    color: rgba(0, 0, 0, 0.8);
 }
-body{
+
+body {
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: #f5f6f7;
     overflow-x: hidden;
 }
-.container{
+
+.container {
     margin: 70px auto 50px;
     max-width: 500px;
     width: 100%;
@@ -68,14 +77,17 @@ body{
     align-content: center;
     align-items: center;
 }
-.notice{
+
+.notice {
     margin-left: 20px;
 }
-#typography-caption{
+
+#typography-caption {
     font-weight: 300;
     font-size: 17px;
 }
-.title{
+
+.title {
     margin-top: 20px;
     font-size: 45px;
     font-weight: 700;
@@ -83,21 +95,26 @@ body{
     margin-bottom: 20px;
     word-break: keep-all;
 }
-.box{
+
+.box {
     margin: 20px;
 }
-label{
+
+label {
     font-size: 28px;
     font-weight: 700;
 }
-span.star{
+
+span.star {
     color: #e93636;
 }
-#mini_notice{
+
+#mini_notice {
     font-weight: 300;
     display: inline-block;
 }
-input{
+
+input {
     font-weight: 300;
     text-align: center;
     width: 100%;
@@ -105,19 +122,21 @@ input{
     border-radius: 15px;
     font-size: 20px;
 }
+
 /*
 .error-massage{
    color: #e93636;
 }
 */
-hr{
+hr {
     border: 0 solid;
     height: 1px;
     background-color: #d2d2d7;
     margin-top: 40px;
     margin-bottom: 30px;
 }
-button{
+
+button {
     width: 100%;
     height: 10vh;
     outline: none;
@@ -128,79 +147,99 @@ button{
     background-color: #0071e3;
     color: white;
 }
-.popup-page{
-     justify-content: center;
-     align-items: center;
-     visibility: hidden;
+
+.curtain{}
+
+
+.popup-page {
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
 }
-#popup-title{
+
+#popup-title {
     /*
     white-space: nowrap;
      */
     text-align: center;
 }
+
 #popup-description {
     text-align: center;
     word-break: keep-all;
 }
-.popup-page.active{
+
+.popup-page.active {
     visibility: visible;
 }
+
 #interview {
     word-break: keep-all;
     text-align: center;
     color: #0070c9;
 }
-a{
-    text-decoration:none;
+
+a {
+    text-decoration: none;
 }
-#link:visited{
+
+#link:visited {
     color: #0070c9;
 }
-#link:hover{
+
+#link:hover {
     color: #0070c9;
     text-decoration: none;
 }
-.copyright{
+
+.copyright {
     text-align: center;
     font-weight: 100;
     font-size: 14px;
 }
 
 /* Mobile layout */
-@media only screen and (max-width:767px) {
-    body{
+@media only screen and (max-width: 767px) {
+    body {
         background-color: #fff;
     }
-    .nav-title p{
+
+    .nav-title p {
         font-size: 19px;
         line-height: 1.26316;
         letter-spacing: .012em;
     }
-    #pc-img{
+
+    #pc-img {
         display: none;
     }
-    #mobile-img{
+
+    #mobile-img {
         max-width: 100%;
         margin: 0 auto;
     }
-    #typography-head{
+
+    #typography-head {
         margin: 40px auto 18px;
         font-size: 40px;
         font-weight: 600;
     }
-    #typography-description{
+
+    #typography-description {
         margin: 0 40px 100px;
         font-size: 19px;
         font-weight: 400;
     }
-    #between-headline-container{
+
+    #between-headline-container {
         margin: 0 60px;
     }
-    #typography-caption{
+
+    #typography-caption {
         font-size: 15px;
     }
-    .popup-page{
+
+    .popup-page {
         padding: 40px 45px 25px;
         position: fixed;
         top: 50%;
@@ -211,56 +250,67 @@ a{
         height: auto;
         border-radius: 50px;
         /* 바탕 어둡게 처리 */
-        box-shadow: 0 25px 50px rgba(0,0,0,0.5), 0 0 0 1000px rgba(0,0,0,0.6);
+        box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5), 0 0 0 1000px rgba(0, 0, 0, 0.6);
     }
-    #popup-title{
+
+    #popup-title {
         margin-bottom: 30px;
         font-size: 45px;
         font-weight: 700;
     }
-    #popup-description{
+
+    #popup-description {
         font-size: 23px;
         font-weight: 400;
     }
-    #interview{
+
+    #interview {
         margin: 30px auto 20px;
         font-size: 18px;
         font-weight: 400;
     }
-    .copyright{
+
+    .copyright {
         font-size: 12px;
     }
 }
 
 /* PC layout */
-@media only screen and (min-width:767px) {
-    body{
+@media only screen and (min-width: 767px) {
+    body {
         height: 130vh; /* PC 윗 여백 생성 */
     }
-    .nav-title p{
+
+    .nav-title p {
         max-width: 100%;
         line-height: 1.26316;
         letter-spacing: .012em;
     }
-    .background{
+
+    .background {
         margin: 50vh 50vh 0;
     }
-    #mobile-img{
+
+    #mobile-img {
         display: none;
     }
-    #typography-head{
+
+    #typography-head {
         margin: 90px auto 30px;
         font-size: 60px;
         font-weight: 700;
     }
-    #typography-description{
+
+    #typography-description {
         margin: 0 600px 100px; /* 줄바꿈 여백 */
         font-size: 25px;
     }
-    #between-headline-container{
+
+    #between-headline-container {
         margin: 0 500px; /* hr 길이*/
     }
-    .popup-page{
+
+    .popup-page {
         padding: 50px 50px;
         position: fixed;
         top: 50%;
@@ -271,26 +321,31 @@ a{
         height: auto;
         border-radius: 30px;
         /* 바탕 어둡게 처리 */
-        box-shadow: 0 25px 50px rgba(0,0,0,0.5), 0 0 0 1000px rgba(0,0,0,0.7);
+        box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5), 0 0 0 1000px rgba(0, 0, 0, 0.7);
     }
-    #popup-title{
+
+    #popup-title {
         margin-bottom: 30px;
         font-size: 60px;
         font-weight: 700;
     }
-    #popup-description{
+
+    #popup-description {
         font-size: 25px;
         font-weight: 400;
     }
-    #interview{
+
+    #interview {
         margin: 40px auto 0;
         font-size: 20px;
         font-weight: 400;
     }
-    #link:visited{
+
+    #link:visited {
         color: #0070c9;
     }
-    #link:hover{
+
+    #link:hover {
         text-decoration: underline;
     }
 
