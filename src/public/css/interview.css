@@ -54,6 +54,9 @@ body {
 }
 
 #mobile-vid1 {
+    position: relative;
+    width: 100%;
+    height: auto;
 }
 
 .intro {
@@ -80,14 +83,15 @@ body {
         display: none;
     }
 
+    /*
     .first-mobile #mobile-vid1 {
         /*width: 767px;*/
-        /*object-fit: fill;*/
+        /*object-fit: fill;
         position: relative;
         width: 100%;
         height: auto;
 
-    }
+    }*/
 
     .intro {
         float: left;
@@ -220,21 +224,6 @@ body {
         height: 100vh;
         overflow: hidden;
         margin: 0 auto;
-    }
-
-    .rea {
-        position: absolute;
-        top: 50%;
-        width: 100%;
-    }
-
-    .first .rea {
-    }
-
-    .rea p {
-        text-align: center;
-        font-size: 60px;
-        color: #ffffff;
     }
 
     .mobile {
