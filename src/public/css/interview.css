@@ -58,8 +58,12 @@ body {
      height: auto;
  }
 
-.intro {
+.intro{
     float: left;
+
+}
+
+.intro .intro-title{
     font-weight: 700;
     letter-spacing: 0.02em;
     word-break: keep-all;
@@ -262,9 +266,9 @@ body {
         font-size: 80px;
     }
 
-
-
-
+    .intro-title{
+        font-size: 30px;
+    }
 
 
 }
