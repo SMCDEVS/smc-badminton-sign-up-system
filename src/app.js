@@ -17,7 +17,7 @@ app.get('/', (req, res) => {
     res.render('index.ejs', {});
 })
 
-app.get('/iLy6wbTk795SXmw/admin', async (req, res) => {
+    app.get('/admin', async (req, res) => {
 
     let results = await mysql.execute(`select * from user`)
     res.render('admin.ejs', {data: results})
